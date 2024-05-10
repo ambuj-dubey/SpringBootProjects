@@ -36,6 +36,11 @@ public class MyController {
 	public String ConditionalHandler(Model m) {
 		System.out.println("Conditional handler executed");
 		m.addAttribute("isActive", true);
+		m.addAttribute("gender", "F");
+		
+		List<Integer> list = List.of(233,43,53,6456,64);
+		m.addAttribute("myList", list);
+		
 		return "condition";
 	}
 

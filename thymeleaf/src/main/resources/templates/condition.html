@@ -8,5 +8,21 @@
 	<h1>Conditional Statement in Thymeleaf</h1>
 	<h1>User is <span th:style="${isActive} ? 'color:green' : 'color:red' "
 					  th:text="${isActive} ? 'ACTIVE' : 'NOT ACTIVE'"></span></h1>
+					  
+	<h1 th:if="${gender}=='M'">Male</h1>
+	<h1 th:unless="${gender}=='M'">FeMale</h1> <!-- //this work same as the if-else condition -->
+	
+	<ul>
+	
+		<li th:each="n,status : ${myList}">
+			<span th:style="${status.odd} ? 'font-weight:bold' : ' ' " th:text="${status.index+1}+' '+${n}"></span>
+		</li>
+	</ul>
+	<h1 th:text = "${#lists.size(myList)}" ></h1>
+	<div th:switch="${#lists.size(myList)}">
+		<h1 th:case="'0'">List Contain zero element</h1>
+		<h1 th:case="'1'">List Contain ONe element</h1>
+		<h1 th:case="*">List Contain more than one element</h1>
+	</div>
 </body>
 </html>
