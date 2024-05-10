@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+body {
+	background: red;
+}
+section {
+	background:blue;
+	color:white;
+	padding:30px;
+}
