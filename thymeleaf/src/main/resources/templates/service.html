@@ -8,8 +8,8 @@
 	<h1>THis is service provided by Ambuj Dubey</h1>
 	<!-- Going to bring footer -->
 	
-	<footer th:replace="footer::footer1">
-	
+	<!-- <footer th:replace="footer::footer1('This is title','This is sub')"> -->  <!--From here we can pass the dynamic value to the footer  -->
+	<footer th:replace="footer::footer1(${title},${subtitle})">
 	</footer>
 </body>
 </html>

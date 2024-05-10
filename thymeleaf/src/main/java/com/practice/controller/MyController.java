@@ -1,6 +1,7 @@
 package com.practice.controller;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -46,6 +47,8 @@ public class MyController {
 	@GetMapping("/service")
 	//handler for including fragment
 	public String serviceHandler(Model m) {
+		m.addAttribute("title", "I like to write poems");
+		m.addAttribute("subtitle", LocalDateTime.now().toString());
 		return "service";
 	}
 

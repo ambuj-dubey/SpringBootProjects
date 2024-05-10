@@ -5,10 +5,11 @@
 	<title>Footer Template</title>
 </head>
 <body>
-	<footer th:fragment="footer1">
+	<footer th:fragment="footer1(title,subtitle)">  <!-- THis is the way to accept the dynamic value from the service -->
 		
 		<div class="container" >
-		
+		<h1 th:text="${title}"></h1>
+		<h2 th:text="${subtitle}"></h2>
 		<h1>About Ambuj Dubey coding resourses</h1>
 		<h2>He is the best writer, Story teller</h2>
 		<h1>Feel free to Colaborate with him</h1>
