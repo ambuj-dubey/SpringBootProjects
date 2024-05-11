@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringvalidationApplication",
+            "request": "launch",
+            "mainClass": "com.validate.SpringvalidationApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-ThymeleafApplication<thymeleaf>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
